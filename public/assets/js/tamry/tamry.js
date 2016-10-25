@@ -242,6 +242,23 @@ function formatItems (items) {
      cells[6].firstChild.value= cells[3].firstChild.value;
     }); 
   });
+//
+//check out
+//
+ $("#checkout").on('click',function(){
+
+    // set the invoice to an array of objects
+    var table = document.getElementById("table");
+
+        for (var i = 0, row; row = table.rows[i]; i++) {
+
+            for (var j = 0, col; col = row.cells[j]; j++) {
+            console.log(document.getElementById("table").rows[i].cells.item(j).firstChild.value) ;
+              
+              }
+            }
+ })
+
 
 ///
 /// change unite and unite price
@@ -365,20 +382,4 @@ $('body').on('click','#removeItem',function () {
           }
       });
   });
-//
-//check out
-//
- $("#checkout").on('click',function(){
-
-    // set the invoice to an array of objects
-    var table = document.getElementById("table");
-
-        for (var i = 0, row; row = table.rows[i]; i++) {
-
-            for (var j = 0, col; col = row.cells[j]; j++) {
-            console.log(document.getElementById("table").rows[i].cells.item(j).firstChild.value) ;
-              
-              }
-            }
- })
 
